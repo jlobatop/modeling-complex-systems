@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%                              HOMEWORK #1                                %
+%                              HOMEWORK #1.A                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 %This code was originally downloaded from the following web site
@@ -24,17 +24,17 @@ rule(1).after = 'F[-F]F[+F]F';
 nReps = 4;
 
 %String calculation
-ResultingString = LsysExpand(nReps, axiom, rule);
+ResultingString = LsysExpandA(nReps, axiom, rule);
 
 %Plot parameters definition
-plotParameters = struct('length', cell(1, 1), 'color', cell(1, 1));
+plotParameters = struct('length', cell(1, 1), 'color', cell(1, 1), 'delta', cell(1, 1));
 
 plotParameters(1).length = 1; %Length of case F
 plotParameters(1).color = [0.0 1.0 0.0]; %Green
 plotParameters(1).delta = 25;
 
 %Turtle graphic plotter
-LsysDraw(ResultingString, plotParameters, 'Weed-1 (Figure 6.5)', 1);
+LsysDrawA(ResultingString, plotParameters, 'Weed-1 (Figure 6.5)', 1);
 
 %% SQUARE-SPIKES. Figure 6.9
 clear all
@@ -50,17 +50,17 @@ rule(1).after = 'F17-F34+F17-F';
 nReps = 5;
 
 %String calculation
-ResultingString = LsysExpand(nReps, axiom, rule);
+ResultingString = LsysExpandA(nReps, axiom, rule);
 
 %Plot parameters definition
-plotParameters = struct('length', cell(1, 1), 'color', cell(1, 1));
+plotParameters = struct('length', cell(1, 1), 'color', cell(1, 1), 'delta', cell(1,1));
 
 plotParameters(1).length = 1; %Length of case F
 plotParameters(1).color = [0.0 0.0 0.0]; %Black
 plotParameters(1).delta = 5;
 
 %Turtle graphic plotter
-LsysDraw(ResultingString, plotParameters, 'Square-spikes (Figure 6.9)', 2);
+LsysDrawA(ResultingString, plotParameters, 'Square-spikes (Figure 6.9)', 2);
 
 
 %% NATURE INSPIRED FRACTAL
@@ -81,7 +81,7 @@ rule(2).after = '4+M40-N[25+Y]N40-M68-';
 nReps = 7;
 
 %String calculation
-ResultingString = LsysExpand(nReps, axiom, rule);
+ResultingString = LsysExpandA(nReps, axiom, rule);
 
 %Plot parameters definition
 plotParameters = struct('length', cell(4, 1), 'color', cell(4, 1),'delta',cell(1,1));
@@ -97,4 +97,4 @@ plotParameters(4).color = [1.0 0.0 0.0]; %Red color (N)
 plotParameters(1).delta = 2.5;
 
 %Turtle graphic plotter
-LsysDraw(ResultingString, plotParameters, 'Nature inspired fractal', 3);
+LsysDrawA(ResultingString, plotParameters, 'Nature inspired fractal', 3);
